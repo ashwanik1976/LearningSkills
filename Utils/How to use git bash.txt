@@ -1,6 +1,7 @@
+search git bash in cortana window
+
 cd d:
-cd Learning/
-cd LearningSkills/
+cd Learning/LearningSkills/
 
 git add **/*.*
 git stage **/*.*
