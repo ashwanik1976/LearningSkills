@@ -1,0 +1,8 @@
+cd d:
+cd Learning/
+cd LearningSkills/
+
+git add **/*.*
+git stage **/*.*
+git commit -m "Comment"
+git push -all
