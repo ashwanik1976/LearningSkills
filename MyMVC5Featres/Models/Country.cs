@@ -12,15 +12,10 @@ namespace MyMVC5Featres.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Employee
+    public partial class Country
     {
-        public int EmployeeId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Gender { get; set; }
-        public string Department { get; set; }
-        public Nullable<int> Salary { get; set; }
-        public Nullable<System.DateTime> HireDate { get; set; }
-        public Nullable<int> ManagerId { get; set; }
+        public int CountryId { get; set; }
+        public string Country1 { get; set; }
+        public string City { get; set; }
     }
 }

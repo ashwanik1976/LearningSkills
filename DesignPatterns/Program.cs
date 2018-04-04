@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +27,16 @@ namespace DesignPatterns
             {
                 Console.Write("sgdhd");
             }
-            Console.Read();
+           
 
+            Hashtable ht = new Hashtable();
+            ht.Add("name", "Ashwani Kumar");
+            ht.Add("Salary", 10000);
+            Dictionary<string,string> dictionary = new Dictionary<string,string> ();
+            dictionary.Add("name", "Ashwani Kumar");
+            //dictionary.Add("Salary", 10000);
+
+            Console.Read();
         }
     }
 }

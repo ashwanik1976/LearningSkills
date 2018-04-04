@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidPrinciples", "SolidPri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadingApp", "MultithreadingApp\MultithreadingApp.csproj", "{EB23602E-6DB1-4CE1-B6FE-EA9EDEB5F0DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{3A491464-2D39-4B63-A35E-9AD9A372DF7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{EB23602E-6DB1-4CE1-B6FE-EA9EDEB5F0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB23602E-6DB1-4CE1-B6FE-EA9EDEB5F0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB23602E-6DB1-4CE1-B6FE-EA9EDEB5F0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
