@@ -44,6 +44,5 @@ namespace MultithreadingApp
             }
             auto1.Set();
         }
-
     }
 }

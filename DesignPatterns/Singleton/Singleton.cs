@@ -72,11 +72,22 @@ namespace DesignPatterns.Singleton
             }
         }
         #endregion
-        #region Fourth Version -Lazy Loading
 
+        #region Fourth Version -Eager Loading
+        private static readonly Singleton _eagerInstance = new Singleton();
+        public static Singleton eagerInstance
+        {
+            get
+            {
+               return _eagerInstance;
+            }
+        }
+
+        #endregion
+
+        #region Fourth Version -Lazy Loading
         private static readonly Lazy<Singleton> lazy = new Lazy<Singleton>(() => new Singleton());
         public static Singleton Instance { get { return lazy.Value; } }
-
         #endregion
     }
 }

@@ -47,6 +47,7 @@
     <Compile Include="LSP\Fruits.cs" />
     <Compile Include="LSP\FruitsLSP.cs" />
     <Compile Include="OCP\Car.cs" />
+    <Compile Include="OCP\CreditCard.cs" />
     <Compile Include="OCP\MileageCalculator.cs" />
     <Compile Include="OCP\MileageCalculatorOCP.cs" />
     <Compile Include="Program.cs" />

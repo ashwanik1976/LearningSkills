@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyFirstWebAPI.Models;
+using System.Net.Http;
+using Moq;
 
 namespace MyFirstWebAPI.Controllers.Tests
 {
@@ -15,21 +17,21 @@ namespace MyFirstWebAPI.Controllers.Tests
     public class EmployeesControllerTests
     {
         IEmployeeRepository _repository = new EmployeeRepository();
-        IList<Employee> empList = new List<Employee>();
+       // IList<Employee> empList = new List<Employee>();
+
+        Mock<IEmployeeRepository> _employeeRepositoryMock = new Mock<IEmployeeRepository>();
         EmployeesController _target;
-        public EmployeesControllerTests(IEmployeeRepository employeeRepository)
-        {
-            _repository = employeeRepository;
-            _target = new EmployeesController(_repository);
-        }
+        //public EmployeesControllerTests(IEmployeeRepository employeeRepository)
+        //{
+        //    _repository = employeeRepository;
+        //    _target = new EmployeesController(_repository);
+        //}
         [TestInitialize]
         public void TestInitializer()
         {
-            
-            empList.Add(new Employee { code = "emp101", firstName = "Ashwani", lastName = "Kumar", gender = "Male", age = 23, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "Bangalore" } });
-            empList.Add(new Employee { code = "emp102", firstName = "Jyoti", lastName = "Kumar", gender = "FeMale", age = 20, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "Noida" } });
-            empList.Add(new Employee { code = "emp103", firstName = "Atharv", lastName = "Kumar", gender = "Male", age = 24, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "Hydrabad" } });
-            empList.Add(new Employee { code = "emp104", firstName = "Salini", lastName = "Kumar", gender = "FeMale", age = 25, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "New Delhi" } });
+            _employeeRepositoryMock.Setup(x => x.GetAll()).Returns(new List<Employee> { 
+                new Employee { code = "emp101", firstName = "Ashwani", lastName = "Kumar", gender = "Male", age = 23,Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "Bangalore" } } });
+            _target = new EmployeesController(_employeeRepositoryMock.Object);
         }
 
         [TestMethod()]
@@ -39,9 +41,11 @@ namespace MyFirstWebAPI.Controllers.Tests
 
             //var controller = new EmployeesController(_repository);
 
-            var result = _target.Get().ToList<Employee>();
+            var result = _target.Get();
 
-            Assert.IsTrue(result.Count() > 0);
+            //Assert.IsTrue(result.Count() > 0);
+            Assert.IsNotNull(result);
+            //Assert.IsNotNull(result.StatusCode);
         }
     }
 }

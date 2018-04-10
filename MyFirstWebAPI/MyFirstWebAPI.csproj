@@ -225,6 +225,7 @@
     <Compile Include="Controllers\IdentityBasicAuthenticationAttribute.cs" />
     <Compile Include="Controllers\UnityResolver.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Filters\CustomexceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

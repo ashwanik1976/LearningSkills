@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension.cs" />
     <Compile Include="Factory\Bike.cs" />
     <Compile Include="Factory\ConcreateVehicleFactory.cs" />
     <Compile Include="Factory\IVehicle.cs" />

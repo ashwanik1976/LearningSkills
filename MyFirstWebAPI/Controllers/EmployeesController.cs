@@ -24,12 +24,35 @@ namespace MyFirstWebAPI.Controllers
             //empList.Add(new Employee { code = "emp104", firstName = "Salini", lastName = "Kumar", gender = "FeMale", age = 25, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "New Delhi" } });
             _repository = repository;
         }
+        //[Route("")]
+        //public HttpResponseMessage Get()
+        //{
+        //    //return empList;
+        //    //return null;
+        //    var employees = _repository.GetAll();
+        //   // employees = null;
+        //    if (employees == null)
+        //    {
+        //        //throw new HttpResponseException(HttpStatusCode.NotFound);
+        //        string message = "No Employee found with ID ";
+        //        return Request.CreateErrorResponse(HttpStatusCode.NotFound, message);
+        //    }
+        //    return Request.CreateResponse(HttpStatusCode.OK, employees); ;
+        //}
         [Route("")]
-        public IEnumerable<Employee> Get() =>
+        public IHttpActionResult Get()
+        {
             //return empList;
             //return null;
-            _repository.GetAll();
-
+            var employees = _repository.GetAll();
+            // employees = null;
+            if (employees == null)
+            {
+                //throw new HttpResponseException(HttpStatusCode.NotFound);
+                return  NotFound();
+            }
+            return  Ok(employees);
+        }
         [Route("{code}")]
         [HttpGet]
         public IHttpActionResult Get(string code)
@@ -39,7 +62,9 @@ namespace MyFirstWebAPI.Controllers
             if (employee == null)
             {
                 //throw new HttpResponseException(HttpStatusCode.NotFound);
-                return NotFound();
+                //return NotFound();
+               
+                
             }
             //return Request.CreateResponse(employee);
             return Ok(employee);
