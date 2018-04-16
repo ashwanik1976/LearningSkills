@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultithreadingApp", "Multit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{3A491464-2D39-4B63-A35E-9AD9A372DF7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{92732462-E42A-46F1-A99E-2E5AB4556099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleModule", "SampleModule\SampleModule.csproj", "{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A491464-2D39-4B63-A35E-9AD9A372DF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92732462-E42A-46F1-A99E-2E5AB4556099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92732462-E42A-46F1-A99E-2E5AB4556099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92732462-E42A-46F1-A99E-2E5AB4556099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92732462-E42A-46F1-A99E-2E5AB4556099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

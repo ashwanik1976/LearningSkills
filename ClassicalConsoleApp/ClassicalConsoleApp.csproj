@@ -114,6 +114,7 @@
     <Compile Include="DatabaseLog.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DelegateAndEvents.cs" />
     <Compile Include="Department.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>

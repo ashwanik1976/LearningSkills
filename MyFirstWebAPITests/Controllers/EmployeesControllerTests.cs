@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using MyFirstWebAPI.Models;
 using System.Net.Http;
 using Moq;
+using System.Web.Http;
+using System.Web.Http.Results;
 
 namespace MyFirstWebAPI.Controllers.Tests
 {
@@ -47,5 +49,15 @@ namespace MyFirstWebAPI.Controllers.Tests
             Assert.IsNotNull(result);
             //Assert.IsNotNull(result.StatusCode);
         }
+
+        [TestMethod]
+        public void GetReturnsNotFound()
+        {
+            // Arrange
+            IHttpActionResult actionResult = _target.Get();
+            // Assert
+            Assert.IsInstanceOfType(actionResult, typeof(NotFoundResult));
+        }
+
     }
 }

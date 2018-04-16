@@ -10,10 +10,11 @@ using MyMVC5Featres.Models;
 
 namespace MyMVC5Featres.Controllers
 {
+    
     public class EmployeeController : Controller
     {
         private EmployeeManagementEntities db = new EmployeeManagementEntities();
-
+        //[Authorize]
         // GET: Employee
         public ActionResult Index()
         {

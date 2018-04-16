@@ -1,4 +1,5 @@
 ﻿using MyFirstWebAPI.Models;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Web.Http;
 namespace MyFirstWebAPI.Controllers
 {
     [RoutePrefix("api/employees")]
+    //[Authorize(Users="ashwani")]
     public class EmployeesController : ApiController
     {
 
@@ -44,8 +46,18 @@ namespace MyFirstWebAPI.Controllers
         {
             //return empList;
             //return null;
-            var employees = _repository.GetAll();
-            // employees = null;
+            IEnumerable<Employee> employees; 
+            employees = null;
+            try
+            {
+                _repository = null;
+                employees = _repository.GetAll();
+            }
+            catch (Exception ex)
+            {
+                Logger logger = LogManager.GetCurrentClassLogger();
+                logger.ErrorException("Error:", ex);
+            }
             if (employees == null)
             {
                 //throw new HttpResponseException(HttpStatusCode.NotFound);

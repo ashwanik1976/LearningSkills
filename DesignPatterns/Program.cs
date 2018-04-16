@@ -54,23 +54,40 @@ namespace DesignPatterns
 
 
             //overriding
-            BC b;
-            b = new BC();
+            //BC b;
+            //b = new BC(5,5);
+            //b.Display();
+
+           DC b = new DC(6,6);
             b.Display();
 
-            b = new DC();
-            b.Display();
-
-            b = new TC();
-            b.Display();
-
-
+            //b = new TC();
+            //b.Display();
+            int x = new int();
+            x = 20;
+            int y = new int();
+            y = x;
+            y = 30;
+            //Line3    
+            System.Console.WriteLine(x);
+            System.Console.WriteLine(y);
             Console.ReadLine();
         }
     }
 
     class BC
     {
+        public BC()
+        {
+            System.Console.WriteLine("empty");
+        }
+        public BC(int x, int y)
+        {
+            x = 10;
+            y = 10;
+            System.Console.WriteLine("base parameter");
+        }
+        
         public virtual void Display()
         {
             System.Console.WriteLine("BC::Display");
@@ -79,17 +96,43 @@ namespace DesignPatterns
 
     class DC : BC
     {
+        public DC(int x, int y) : base(x, y)
+        {
+            System.Console.WriteLine("DC Parameter");
+        }
+       
         public override void Display()
         {
             System.Console.WriteLine("DC::Display");
         }
     }
 
-    class TC : DC
+    //class TC : DC
+    //{
+    //    public override void Display()
+    //    {
+    //        System.Console.WriteLine("TC::Display");
+    //    }
+    //}
+
+    public abstract class Calculation
     {
-        public override void Display()
-        {
-            System.Console.WriteLine("TC::Display");
-        }
+        public abstract void Add();
+        public virtual void Mul()
+        { }
+    }
+    public class Calc : Calculation
+    {
+        public override void Add()
+        { }
+        public void Addtion()
+        { }
+    }
+    public class Calc1 : Calc
+    {
+        public override void Add()
+        { }
+        public override void Mul()
+        { }
     }
 }

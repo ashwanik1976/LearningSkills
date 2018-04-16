@@ -19,6 +19,7 @@ namespace ClassicalConsoleApp
         {
             int num, k = 0; int a = 0, b = 0, tmp = 0; num = 975846;
             int[] arr = new int[6];
+            Array.BinarySearch(arr, 8);
             while (num > 0)
             {
                 tmp = num % 10;
