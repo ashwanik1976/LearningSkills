@@ -1,6 +1,8 @@
-﻿using System;
+﻿using ClassicalConsoleApp.ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +13,39 @@ namespace ClassicalConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            AuthorServiceClient ss = new AuthorServiceClient();
+            try
+            {
+                var author = ss.GetInfo("102");
+            }
+            catch (FaultException<CustomException> fex)
+            {
+
+                throw fex;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            T1 Obj1 = new Test();
+            Obj1.Display();
+
+
+
+            T2 Obj2 = new Test();
+
+            Obj2.Display();
+
+
+            InterviewQuestionSampleCode sc = new InterviewQuestionSampleCode();
+            sc.Only100Instance();
+
+
             GetSendHighestDigitInGivenNumber();
+
             Console.Read();
         }
 
@@ -42,5 +76,9 @@ namespace ClassicalConsoleApp
             }
             Console.WriteLine("Second largest number is b={0}", arr[1]);
         }
+    }
+    abstract class MyClass
+    {
+        //Your code  
     }
 }

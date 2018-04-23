@@ -1,10 +1,12 @@
-﻿using MyFirstWebAPI.Models;
+﻿using MyFirstWebAPI.Filters;
+using MyFirstWebAPI.Models;
 using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
@@ -42,16 +44,22 @@ namespace MyFirstWebAPI.Controllers
         //    return Request.CreateResponse(HttpStatusCode.OK, employees); ;
         //}
         [Route("")]
+        [BasicAuthentication]
         public IHttpActionResult Get()
         {
             //return empList;
             //return null;
+
+            string userName = Thread.CurrentPrincipal.Identity.Name;
             IEnumerable<Employee> employees; 
             employees = null;
             try
             {
-                _repository = null;
-                employees = _repository.GetAll();
+                if (userName != null)
+                {
+                    //_repository = null;
+                    employees = _repository.GetAll();
+                }
             }
             catch (Exception ex)
             {

@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstAspNetCoreWebApp", "MyFirstAspNetCoreWebApp\MyFirstAspNetCoreWebApp.csproj", "{4ED3FEEF-24B6-4CDB-9866-EE5ED9C24517}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicalConsoleApp", "ClassicalConsoleApp\ClassicalConsoleApp.csproj", "{D206EDC0-B743-496B-BF46-E94580C70AC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D27574B-A52F-4241-A996-23CB3247CDDC} = {5D27574B-A52F-4241-A996-23CB3247CDDC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAngular2Demo", "MyAngular2Demo\MyAngular2Demo.csproj", "{6C03C7B9-7746-4F88-8EA9-3351B436F3BD}"
 EndProject
@@ -38,6 +41,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{92732462-E42A-46F1-A99E-2E5AB4556099}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleModule", "SampleModule\SampleModule.csproj", "{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D27574B-A52F-4241-A996-23CB3247CDDC} = {5D27574B-A52F-4241-A996-23CB3247CDDC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstRestService", "MyFirstRestService\MyFirstRestService.csproj", "{D4FF0658-EC6D-49BE-BE6B-C3E60416899F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWcfService", "MyFirstWcfService\MyFirstWcfService.csproj", "{5D27574B-A52F-4241-A996-23CB3247CDDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +127,14 @@ Global
 		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBCEA482-6C79-4A8C-B6FB-ED4A6DD4BF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4FF0658-EC6D-49BE-BE6B-C3E60416899F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4FF0658-EC6D-49BE-BE6B-C3E60416899F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4FF0658-EC6D-49BE-BE6B-C3E60416899F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4FF0658-EC6D-49BE-BE6B-C3E60416899F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
