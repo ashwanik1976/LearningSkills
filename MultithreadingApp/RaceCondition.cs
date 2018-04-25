@@ -22,12 +22,20 @@ namespace MultithreadingApp
     public class RaceCondition
     {
         private static int counter;
-        
         private static void PrintStar()
         {
-            for (counter = 0; counter < 5; counter++)
+            try
             {
-                Console.Write(" * " + "\t");
+                for (counter = 0; counter < 5; counter++)
+                {
+                    int i = 10, j = 0;
+                    int k = 10 / j;
+                    Console.Write(" * " + "\t");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
@@ -44,15 +52,37 @@ namespace MultithreadingApp
         ///
         public void GenerateRaceCondition()
         {
-            //Thread T1 = new Thread(PrintStar);
-            //T1.Start();
+            
+            //try
+            //{
+                //Thread T1 = new Thread(PrintStar);
+                //T1.Start();
 
-            //Thread T2 = new Thread(PrintPlus);
-            //T2.Start();
+                //Thread T2 = new Thread(PrintPlus);
+                //T2.Start();
 
-            Task.Factory.StartNew(PrintStar);
-            Task.Factory.StartNew(PrintPlus);
-            Console.ReadLine();
+
+                Task T1 = Task.Factory.StartNew(PrintStar);
+                Task T2 = Task.Factory.StartNew(PrintPlus);
+            //Task t = Task.Factory.StartNew(() => {
+            //    try
+            //    {
+            //        Console.WriteLine("Digging is in progress");
+            //        throw new Exception("Tool is crashed");
+            //    }
+            //    catch (Exception ae)
+            //    {
+            //        Console.WriteLine("Stop the work and notify others :" + ae.Message);
+            //    }
+            //});
+           // Task.WaitAll(new Task[] { T1, T2 });
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
+
+            //Console.ReadLine();
         }
         /// <summary>
         /// Avoid race Condition

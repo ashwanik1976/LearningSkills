@@ -11,20 +11,30 @@ namespace MultithreadingApp
     {
         static void Main(string[] args)
         {
-            foreach (int x in Range(-10, 10))
+            try
             {
-                Console.WriteLine(x);
+                //foreach (int x in Range(-10, 10))
+                //{
+                //    Console.WriteLine(x);
+                //}
+                ////Print data in Order from two diffrenet thread
+                //ThreadSynchronizationByOrder thorder = new ThreadSynchronizationByOrder();
+                //thorder.ThreadOrdering();
+
+                //Race Condition
+                RaceCondition raceCondition = new RaceCondition();
+                raceCondition.GenerateRaceCondition();
+                Console.WriteLine("End");
             }
-
-            //Print data in Order from two diffrenet thread
-            ThreadSynchronizationByOrder thorder = new ThreadSynchronizationByOrder();
-            thorder.ThreadOrdering();
-
-            //Race Condition
-            RaceCondition raceCondition = new RaceCondition();
-            raceCondition.GenerateRaceCondition();
-
-            Console.WriteLine("End");
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.InnerException.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.Message);
+                throw ex;
+            }
             Console.ReadLine();
         }
 

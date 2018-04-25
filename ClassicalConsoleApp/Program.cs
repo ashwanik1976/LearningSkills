@@ -48,6 +48,7 @@ namespace ClassicalConsoleApp
 
             Console.Read();
         }
+        
 
         private static void GetSendHighestDigitInGivenNumber()
         {
@@ -80,5 +81,55 @@ namespace ClassicalConsoleApp
     abstract class MyClass
     {
         //Your code  
+    }
+    class MyMath
+    {
+        readonly int read = 10;
+        const int cons = 10;
+        public MyMath()
+        {
+            read = 100;
+            //cons = 100;
+        }
+        /// <summary>
+        /// Catch block maintain hierarchy,if broke then showing compilation error.
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public int Sum(int x, int y)
+        {
+            try
+            {
+                return x + y;
+            }
+            catch (OutOfMemoryException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        //public string Sum(int x, int y)
+        //{
+        //    return x + y;
+        //}
+    }
+    class Test
+    {
+        readonly int read = 10;
+        const int cons = 10;
+        public Test()
+        {
+            read = 100;
+            //cons = 100;
+        }
+        public void Check()
+        {
+            Console.WriteLine("Read only : {0}", read);
+            Console.WriteLine("const : {0}", cons);
+        }
     }
 }
