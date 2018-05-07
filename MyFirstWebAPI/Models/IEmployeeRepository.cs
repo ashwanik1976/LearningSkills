@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyFirstWebAPI.Models
 {
-    public interface IEmployeeRepository
+    public interface IEmployeeRepository<T> where T : class
     {
-        IEnumerable<Employee> GetAll();
+        IEnumerable<T> GetAll();
         Employee Get(string code);
-        Employee Add(Employee item);
+        Employee Add(T item);
         void Remove(int id);
-        bool Update(Employee item);
+        bool Update(T item);
     }
 }

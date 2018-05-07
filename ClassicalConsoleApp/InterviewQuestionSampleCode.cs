@@ -42,9 +42,7 @@ namespace ClassicalConsoleApp
         }
         void T2.Display()
         {
-
             Console.WriteLine("Interface T2 implemented");
         }
-
     }
 }

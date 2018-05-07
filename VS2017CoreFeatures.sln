@@ -18,8 +18,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMVC5Featres", "MyMVC5Feat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWebAPI", "MyFirstWebAPI\MyFirstWebAPI.csproj", "{38C07C9C-E4B8-49DC-B739-A6867EB04FCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular4Demo", "Angular4Demo\Angular4Demo.csproj", "{C3DE2376-70BF-4BEF-B078-CC4893F3962B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAngular4DemoAspNetCore", "MyAngular4DemoAspNetCore\MyAngular4DemoAspNetCore.csproj", "{EF455EC8-8AB7-4275-9F34-D852D333F66D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaIntro", "KatanaIntro\KatanaIntro.csproj", "{80EA076E-4CED-4F26-A3D9-CB1B92AF513D}"
@@ -48,6 +46,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstRestService", "MyFirstRestService\MyFirstRestService.csproj", "{D4FF0658-EC6D-49BE-BE6B-C3E60416899F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWcfService", "MyFirstWcfService\MyFirstWcfService.csproj", "{5D27574B-A52F-4241-A996-23CB3247CDDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFistAngularJSWithMVCDemo", "MyFistAngularJSWithMVCDemo\MyFistAngularJSWithMVCDemo.csproj", "{5EED7CE8-9E2A-45C3-B57B-03AD84E57806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstAgularJSWithMVCApp", "MyFirstAgularJSWithMVCApp\MyFirstAgularJSWithMVCApp.csproj", "{97F2A03D-577F-4A35-AA37-38F6399FE81F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +81,6 @@ Global
 		{38C07C9C-E4B8-49DC-B739-A6867EB04FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C07C9C-E4B8-49DC-B739-A6867EB04FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38C07C9C-E4B8-49DC-B739-A6867EB04FCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3DE2376-70BF-4BEF-B078-CC4893F3962B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3DE2376-70BF-4BEF-B078-CC4893F3962B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3DE2376-70BF-4BEF-B078-CC4893F3962B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3DE2376-70BF-4BEF-B078-CC4893F3962B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF455EC8-8AB7-4275-9F34-D852D333F66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF455EC8-8AB7-4275-9F34-D852D333F66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF455EC8-8AB7-4275-9F34-D852D333F66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -135,6 +133,14 @@ Global
 		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D27574B-A52F-4241-A996-23CB3247CDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EED7CE8-9E2A-45C3-B57B-03AD84E57806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EED7CE8-9E2A-45C3-B57B-03AD84E57806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EED7CE8-9E2A-45C3-B57B-03AD84E57806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EED7CE8-9E2A-45C3-B57B-03AD84E57806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97F2A03D-577F-4A35-AA37-38F6399FE81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F2A03D-577F-4A35-AA37-38F6399FE81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F2A03D-577F-4A35-AA37-38F6399FE81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F2A03D-577F-4A35-AA37-38F6399FE81F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

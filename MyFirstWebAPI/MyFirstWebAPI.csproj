@@ -239,7 +239,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DatabaseInitializer .cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeDBContext.cs" />
     <Compile Include="Models\EmployeeRepository.cs" />
     <Compile Include="Models\IEmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

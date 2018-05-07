@@ -17,10 +17,10 @@ namespace MyFirstWebAPI.Controllers
     public class EmployeesController : ApiController
     {
 
-        IEmployeeRepository _repository=new EmployeeRepository();
+        IEmployeeRepository<Employee> _repository=new EmployeeRepository();
         //public EmployeesController()
         //{ }
-        public EmployeesController(IEmployeeRepository repository)
+        public EmployeesController(IEmployeeRepository<Employee> repository)
         {
             //empList.Add(new Employee { code = "emp101", firstName = "Ashwani", lastName = "Kumar", gender = "Male", age = 23, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "Bangalore" } });
             //empList.Add(new Employee { code = "emp102", firstName = "Jyoti", lastName = "Kumar", gender = "FeMale", age = 20, Address = new Address { HouseNumber = 1, Village = "Honagasandra", City = "Noida" } });

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MyFirstWebAPI.Models
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class EmployeeRepository : IEmployeeRepository<Employee>
     {
         IList<Employee> empList = new List<Employee>();
         public EmployeeRepository()

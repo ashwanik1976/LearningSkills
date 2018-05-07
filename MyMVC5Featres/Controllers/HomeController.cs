@@ -8,6 +8,7 @@ namespace MyMVC5Featres.Controllers
 {
     public class HomeController : Controller
     {
+        //[Authorize]
         public ActionResult Index()
         {
             return View();
