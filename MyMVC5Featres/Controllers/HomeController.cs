@@ -6,9 +6,10 @@ using System.Web.Mvc;
 
 namespace MyMVC5Featres.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
-        //[Authorize]
+        
         public ActionResult Index()
         {
             return View();
