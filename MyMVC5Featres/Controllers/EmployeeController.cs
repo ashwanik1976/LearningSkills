@@ -20,9 +20,6 @@ namespace MyMVC5Featres.Controllers
         {
             return View(db.Employees.ToList());
         }
-
-        
-
         // GET: Employee/Details/5
         public ActionResult Details(int? id)
         {
