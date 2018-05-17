@@ -1,0 +1,9 @@
+search git bash in cortana window
+
+cd d:
+cd Learning/LearningSkills/
+
+git add **/*.*
+git stage **/*.*
+git commit -m "Comment"
+git push -all
