@@ -31,14 +31,16 @@ namespace ClassicalConsoleApp
         void Display();
     }
 
-    public class Test : T1, T2
+    public class Test1 : T1, T2
     {
-        //Implement here  
-         void T1.Display()
+        void Display()
         {
-
             Console.WriteLine("Interface T1 implemented");
-
+        }
+        //Implement here  
+        void T1.Display()
+        {
+            Console.WriteLine("Interface T1 implemented");
         }
         void T2.Display()
         {

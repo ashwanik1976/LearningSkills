@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdventureWorksModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="AsyncPrograming.cs" />
     <Compile Include="AWBuildVersion.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>

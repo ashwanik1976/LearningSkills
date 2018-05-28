@@ -41,6 +41,11 @@ namespace DesignPatterns
 
             //RegularExpression
             string str = "test1\n   \ntest2\n   \ntest3\n   \n   \ntest4";
+            foreach (var s in str)
+            {
+                Console.WriteLine(s);
+            }
+
             string[] result = Regex.Split(str, "\n\\s*");
             for (int i = 0; i < result.Length; i++)
                 Console.WriteLine(result[i]);

@@ -51,13 +51,17 @@ namespace MyFirstWebAPI.Controllers
             //return null;
 
             string userName = Thread.CurrentPrincipal.Identity.Name;
-            IEnumerable<Employee> employees; 
-            employees = null;
+            IEnumerable<Employee> employees=null; 
+            //employees = null;
             try
             {
                 if (userName != null)
                 {
                     //_repository = null;
+                    employees = _repository.GetAll();
+                }
+                else
+                {
                     employees = _repository.GetAll();
                 }
             }
@@ -66,11 +70,11 @@ namespace MyFirstWebAPI.Controllers
                 Logger logger = LogManager.GetCurrentClassLogger();
                 logger.ErrorException("Error:", ex);
             }
-            if (employees == null)
-            {
-                //throw new HttpResponseException(HttpStatusCode.NotFound);
-                return  NotFound();
-            }
+            //if (employees == null)
+            //{
+            //    //throw new HttpResponseException(HttpStatusCode.NotFound);
+            //    return  NotFound();
+            //}
             return  Ok(employees);
         }
         [Route("{code}")]

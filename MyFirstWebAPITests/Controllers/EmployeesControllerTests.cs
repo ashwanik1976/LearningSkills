@@ -18,16 +18,17 @@ namespace MyFirstWebAPI.Controllers.Tests
     [TestClass()]
     public class EmployeesControllerTests
     {
-        IEmployeeRepository<Employee> _repository = new EmployeeRepository();
+        //IEmployeeRepository<Employee> _repository = new EmployeeRepository();
+        IEmployeeRepository<Employee> _repository;
        // IList<Employee> empList = new List<Employee>();
 
         Mock<IEmployeeRepository<Employee>> _employeeRepositoryMock = new Mock<IEmployeeRepository<Employee>>();
         EmployeesController _target;
-        //public EmployeesControllerTests(IEmployeeRepository employeeRepository)
-        //{
-        //    _repository = employeeRepository;
-        //    _target = new EmployeesController(_repository);
-        //}
+        public EmployeesControllerTests(IEmployeeRepository<Employee> employeeRepository)
+        {
+            _repository = employeeRepository;
+            _target = new EmployeesController(_repository);
+        }
         [TestInitialize]
         public void TestInitializer()
         {

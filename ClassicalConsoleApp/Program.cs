@@ -14,42 +14,31 @@ namespace ClassicalConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            AuthorServiceClient ss = new AuthorServiceClient();
-            try
-            {
-                var author = ss.GetInfo("102");
-            }
-            catch (FaultException<CustomException> fex)
-            {
 
-                throw fex;
-            }
-            catch (Exception ex)
-            {
+            // TestWCFChannelfactory.CallWCFService();
 
-                throw;
-            }
+            Task task = new Task(AsyncPrograming.callMethod);
+            task.Start();
+            task.Wait();
+            Console.ReadLine();
 
-            T1 Obj1 = new Test();
-            Obj1.Display();
+            //T1 Obj1 = new Test1();
+            //Obj1.Display();
+
+            //T2 Obj2 = new Test1();
+
+            //Obj2.Display();
 
 
-
-            T2 Obj2 = new Test();
-
-            Obj2.Display();
+            //InterviewQuestionSampleCode sc = new InterviewQuestionSampleCode();
+            //sc.Only100Instance();
 
 
-            InterviewQuestionSampleCode sc = new InterviewQuestionSampleCode();
-            sc.Only100Instance();
-
-
-            GetSendHighestDigitInGivenNumber();
+            //GetSendHighestDigitInGivenNumber();
 
             Console.Read();
-        }
-        
 
+        }
         private static void GetSendHighestDigitInGivenNumber()
         {
             int num, k = 0; int a = 0, b = 0, tmp = 0; num = 975846;
@@ -132,4 +121,35 @@ namespace ClassicalConsoleApp
             Console.WriteLine("const : {0}", cons);
         }
     }
+    class TestWCFChannelfactory
+    {
+        public static void CallWCFService()
+        {
+            //AuthorServiceClient ss = new AuthorServiceClient();
+            //try
+            //{
+            //    var author = ss.GetInfo("102");
+            //}
+            //catch (FaultException<CustomException> fex)
+            //{
+
+            //    throw fex;
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    throw;
+            //}
+            WSHttpContextBinding myBinding = new WSHttpContextBinding();
+            EndpointAddress myEndpoint = new EndpointAddress("http://localhost:51541/AuthorService.svc");
+            ChannelFactory<IAuthorService> myChannelFactory = new ChannelFactory<IAuthorService>(myBinding, myEndpoint);
+
+            IAuthorService instance = myChannelFactory.CreateChannel();
+            // Call Service.
+            Console.WriteLine(instance.GetInfo(new AuthorRequest() { AuthorId = "101" }));
+            myChannelFactory.Close();
+        }
+    }
+
+
 }
